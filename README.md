@@ -1,80 +1,160 @@
-# Ultimate GNOME Setup — Gnome-Custimization
+# 🌌 Ultimate GNOME Setup — Gnome-Customization
 
-Repo ini adalah kumpulan tema, aset, konfigurasi, dan skrip untuk membuat pengalaman GNOME Anda menjadi "ultimate" — konsisten, estetis, dan mudah dipasang. Di dalamnya terdapat tema GTK/GNOME Shell, paket wallpaper, tema GRUB, konfigurasi terminal (Oh My Zsh), dan contoh konfigurasi untuk utilitas seperti `fastfetch`.
+![Made with Love](https://img.shields.io/badge/Made%20with-Linux-1793D1?logo=linux&logoColor=white)
+![GNOME](https://img.shields.io/badge/GNOME-45%2B-blue?logo=gnome&logoColor=white)
+![GTK](https://img.shields.io/badge/GTK-3%20%7C%204-4A90E2)
+![Zsh](https://img.shields.io/badge/Zsh-OhMyZsh-FFD700)
+![Fastfetch](https://img.shields.io/badge/Fastfetch-config-green)
 
-**Tujuan**: menyediakan satu tempat untuk mengumpulkan dan menerapkan tweak visual + utilitas yang membuat desktop GNOME nyaman dan produktif.
+Repositori ini berisi kumpulan tema, aset, konfigurasi, dan skrip untuk membuat pengalaman GNOME Anda menjadi **ultimate**, **estetis**, dan **konsisten**.  
+Mulai dari GTK theme, GNOME Shell theme, GRUB theme, wallpaper, sampai setup Zsh dan fastfetch—semuanya ada dalam satu tempat.
 
-**Catatan**: ini juga berisi daftar rekomendasi ekstensi GNOME yang saya sarankan untuk penggunaan sehari-hari; lihat bagian "**Rekomendasi Ekstensi GNOME**" di bawah.
+---
 
-**What's Included**
+## 🌈 Apa Saja yang Termasuk?
 
-- **`Tahoe-gtk-theme`**: Tema GTK/gnome-shell lengkap, aset, skrip build, dan tema untuk aplikasi seperti Firefox (userChrome), Plank, serta skrip instalasi di `install.sh`.
-- **`grub-themes`**: Koleksi tema GRUB (assets, backgrounds, konfigurasi) beserta skrip bantu untuk membangun dan memasang tema GRUB.
-- **`fastfetch`**: Contoh `fastfetch` ASCII / konfigurasi (file `config.jsonc`) untuk menampilkan info sistem di terminal.
-- **`OhMyZsh_Setup`**: Skrip untuk men-setup terminal dan konfigurasi Zsh/Oh My Zsh (`Setup_Terminal.sh`, `Setup_Termux.sh`).
-- **`backgrounds` / wallpaper`**: Koleksi wallpaper dan skrip pemasangan (di dalam `Tahoe-gtk-theme/wallpaper` dan `grub-themes/backgrounds`).
-- **`src` / `release`**: Sumber aset dan skrip pembuatan release untuk tema dan paket.
+### 🎨 **Tahoe-gtk-theme**
+Tema lengkap untuk:
+- GTK 3 & GTK 4  
+- GNOME Shell  
+- Metacity  
+- XFWM4  
 
-**Fitur Utama**
+Termasuk:
+- `userChrome.css` untuk Firefox  
+- Tema Plank  
+- Wallpaper pack  
+- Skrip build & instalasi (`install.sh`)
 
-- **Tema lengkap**: GTK3/4, GNOME Shell, Metacity, XFWM4, dan aset tambahan.
-- **Integrasi aplikasi**: file `userChrome.css` khusus untuk Firefox, dan pengaturan lain untuk konsistensi UI.
-- **Tema boot**: koleksi tema untuk GRUB dengan variasi resolusi dan warna.
-- **Skrip instalasi**: sebagian besar modul menyertakan `install.sh` atau `make-release.sh` untuk mempermudah pemasangan.
+---
 
-**Rekomendasi Ekstensi GNOME**
-Berikut adalah ekstensi GNOME yang direkomendasikan (daftar tidak selalu lengkap — banyak tersedia melalui https://extensions.gnome.org dan `gnome-extensions`):
+### 🖥️ **grub-themes**
+Koleksi tema GRUB berbagai resolusi + skrip instalasi otomatis.
 
-- **AppIndicator and KStatusNotifierItem Support**: dukungan tray/appindicator.
-- **Blur my Shell**: efek blur pada panel/overlay GNOME.
-- **Burn My Windows**: efek animasi saat jendela ditutup.
-- **Caffeine**: mencegah screen dim / sleep saat dibutuhkan.
-- **Compiz alike magic lamp effect**: animasi jendela (efek visual).
-- **Coverflow Alt-Tab**: tampilan Alt-Tab bergaya coverflow.
-- **Dash2Dock Animated** (dash2dock-lite): dock kustom dengan opsi animasi.
-- **ESP (Extensions Search Provider)**: menambahkan provider pencarian ekstensi.
-- **Folder Search Provider**: menambah kemampuan pencarian folder.
-- **Gnome 4x UI Improvements**: tweak untuk GNOME 4.x.
-- **GSConnect**: sinkronisasi/remote antara ponsel Android dan desktop (keren untuk file/clipboard/notifications).
-- **In Picture**: toggle picture-in-picture untuk video.
-- **Just Perfection**: kumpulan opsi kustomisasi GNOME Shell (sangat direkomendasikan).
-- **Logo Menu**: menu aplikasi dengan logo / shortcut tambahan.
-- **Media Controls**: kontrol media di panel.
-- **SSH Search Provider Reborn**: pencarian dan integrasi SSH.
-- **User Themes**: pasang tema GNOME Shell kustom.
-- **Vitals**: monitoring resource kecil di panel.
-- **VSCode Search Provider**: integrasi pencarian untuk VSCode.
-- **WSP (Windows Search Provider)**: provider pencarian Windows-like.
+---
 
-Cara memasang ekstensi: gunakan aplikasi `Extensions` (GNOME Extensions) atau gunakan CLI `gnome-extensions` / situs `extensions.gnome.org` untuk memasang dan mengaktifkan ekstensi.
+### ⚡ **fastfetch**
+- Konfigurasi (`config.jsonc`) untuk tampilan informasi sistem yang rapi dan minimalis.
 
-**Quick Start (Panduan singkat pemasangan)**
+---
 
-1. Clone repositori:
-   `git clone https://github.com/SamVivan1/Gnome-Custimization.git`
-2. Tema GTK/GNOME Shell:
-   - Masuk ke `Tahoe-gtk-theme` dan jalankan: `./install.sh` (periksa isi skrip dan kebutuhan `sudo`).
-3. Tema GRUB (opsional):
-   - Masuk ke `grub-themes` dan jalankan: `./install.sh` atau ikuti README di folder itu.
-4. Wallpaper:
-   - Untuk wallpaper GNOME ada skrip di `Tahoe-gtk-theme/wallpaper/install-gnome-backgrounds.sh`.
-5. Terminal / Zsh:
-   - Jalankan `OhMyZsh_Setup/Setup_Terminal.sh` untuk membantu setup Zsh/Oh My Zsh.
-6. Fastfetch:
-   - Salin atau gunakan `fastfetch/config.jsonc` (atau `fastfetch/config`) sebagai dasar konfigurasi `fastfetch` Anda.
+### 🧩 **OhMyZsh_Setup**
+- Skrip untuk setup Zsh dan Oh My Zsh  
+- Cocok untuk terminal Linux & Termux  
+- Termasuk tema dan plugin dasar
 
-**Kustomisasi**
+---
 
-- Periksa dan edit file konfigurasi sebelum menjalankan skrip instalasi — beberapa skrip mengasumsikan struktur direktori tertentu atau memerlukan hak `sudo`.
-- Gunakan `User Themes` extension untuk memuat `gnome-shell` theme dari `Tahoe-gtk-theme`.
+### 🖼️ **Wallpapers**
+- Wallpaper curated  
+- Skrip pemasangan untuk GNOME dan GRUB backgrounds
 
-**Kontribusi**
+---
 
-- Jangan ragu membuka issue atau PR untuk perbaikan tema, penambahan ekstensi, atau perbaikan dokumentasi.
+### 📁 **src / release**
+- Sumber dan mekanisme build untuk tema dan paket rilis.
 
-**Lisensi**
+---
 
-- Setiap sub-proyek mungkin memiliki lisensinya sendiri (lihat file `COPYING` atau `LICENSE` pada masing-masing folder). Periksa lisensi sebelum mendistribusikan ulang.
+## 🌟 Fitur Utama
 
---
-Jika Anda ingin, saya bisa: menambahkan README terpisah per sub-folder (`Tahoe-gtk-theme/README.md`, `grub-themes/README.md`, dll.), atau membuat skrip instalasi terpadu. Mau saya lanjutkan membuat README per bagian?
+- Tema desktop lengkap (GTK3/4, Shell, Metacity, XFWM4)
+- Tema bootloader GRUB
+- Setup terminal otomatis untuk Zsh/Oh My Zsh
+- Fastfetch config siap pakai
+- Wallpaper terintegrasi
+- Skrip instalasi yang mempermudah setup
+
+---
+
+## 🧩 Rekomendasi Ekstensi GNOME
+
+Direkomendasikan untuk pengalaman GNOME terbaik:
+
+- AppIndicator / KStatusNotifier  
+- Blur my Shell  
+- Burn My Windows  
+- Caffeine  
+- Compiz Magic Lamp  
+- Coverflow Alt-Tab  
+- Dash2Dock Animated  
+- ESP (Extension Search Provider)  
+- Folder Search Provider  
+- GNOME 4.x UI Improvements  
+- GSConnect  
+- In Picture  
+- Just Perfection  
+- Logo Menu  
+- Media Controls  
+- SSH Search Provider Reborn  
+- User Themes  
+- Vitals  
+- VSCode Search Provider  
+- Windows Search Provider (WSP)
+
+Instalasi via:
+- GNOME Extensions App  
+- CLI: `gnome-extensions`  
+- Website: extensions.gnome.org
+
+---
+
+## 🚀 Quick Start
+
+### 1️⃣ Clone repo  
+```bash
+git clone https://github.com/SamVivan1/Gnome-Custimization.git
+```
+
+### 2️⃣ Install tema GTK/GNOME Shell  
+```bash
+cd Tahoe-gtk-theme
+./install.sh
+```
+
+### 3️⃣ Install Tema GRUB (opsional)
+```bash
+cd grub-themes
+./install.sh
+```
+
+### 4️⃣ Install Wallpaper GNOME  
+```bash
+cd Tahoe-gtk-theme/wallpaper
+./install-gnome-backgrounds.sh
+```
+
+### 5️⃣ Setup Zsh / Oh My Zsh  
+```bash
+cd OhMyZsh_Setup
+./Setup_Terminal.sh
+```
+
+### 6️⃣ Fastfetch  
+Salin:
+```
+fastfetch/config.jsonc → ~/.config/fastfetch/config.jsonc
+```
+
+---
+
+## 🛠️ Kustomisasi
+
+- Baca skrip sebelum menjalankan (beberapa membutuhkan `sudo`).
+- Gunakan ekstensi **User Themes** untuk memuat tema GNOME Shell.
+- Modifikasi wallpaper & tema GRUB sesuai preferensi Anda.
+
+---
+
+## 🙏 Kredit
+
+Sebagian tema GTK & GRUB pada repositori ini **berasal atau terinspirasi oleh karya luar biasa dari:**
+
+👉 **VinceliuIce**  
+https://github.com/vinceliuice?tab=repositories  
+
+Pastikan untuk mengecek repository beliau untuk koleksi tema Linux lainnya!
+
+---
+
+### 🎉 Nikmati pengalaman GNOME yang lebih indah, modern, dan konsisten!
